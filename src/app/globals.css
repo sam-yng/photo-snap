@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.storyone-bg {
+	background-image: linear-gradient(#0000, #000),url("../../public/assets/stories/desktop/mountains.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+
+.storytwo-bg {
+	background-image: linear-gradient(#0000, #000),url("../../public/assets/stories/desktop/cityscapes.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+
+.storythree-bg {
+	background-image: linear-gradient(#0000, #000),url("../../public/assets/stories/desktop/18-days-voyage.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+
+.storyfour-bg {
+	background-image: linear-gradient(#0000, #000),url("../../public/assets/stories/desktop/architecturals.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
