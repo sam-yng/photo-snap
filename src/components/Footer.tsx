@@ -92,7 +92,7 @@ export const Footer: React.FC = () => {
             />
           </svg>
         </div>
-        <p className={classNames("text-gray-500", "mt-6")}>
+        <p className={classNames("opacity-70", "mt-6")}>
           Copyright 2019. All Rights Reserved
         </p>
       </div>

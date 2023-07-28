@@ -1,4 +1,3 @@
-import { Navigation } from "@/components/Navigation";
 import classNames from "classnames";
 import heroOne from "../../public/assets/home/desktop/create-and-share.jpg";
 import heroTwo from "../../public/assets/home/desktop/beautiful-stories.jpg";
@@ -6,7 +5,6 @@ import heroThree from "../../public/assets/home/desktop/designed-for-everyone.jp
 import { TextBox } from "@/components/TextBox";
 import { StoryBox } from "@/components/StoryBox";
 import { Feature } from "@/components/Feature";
-import { Footer } from "@/components/Footer";
 import featureOne from "../../public/assets/features/desktop/responsive.svg";
 import featureTwo from "../../public/assets/features/desktop/no-limit.svg";
 import featureThree from "../../public/assets/features/desktop/embed.svg";
@@ -14,7 +12,6 @@ import featureThree from "../../public/assets/features/desktop/embed.svg";
 const Home: React.FC = () => {
   return (
     <main>
-      <Navigation />
       <TextBox
         imageSrc={heroOne}
         title="Create and share your photo stories."
@@ -34,27 +31,31 @@ const Home: React.FC = () => {
         info="Photosnap can help you create stories that resonate with your audience. Our tool is designed for photographers of all levels, brands, businesses you name it."
         buttonText="VIEW THE STORIES"
       />
-      <StoryBox
-        backgroundImage="storyone-bg"
-        title="The Mountains"
-        author="John Appleseed"
-      />
-      <StoryBox
-        backgroundImage="storytwo-bg"
-        title="Sunset Cityscapes"
-        author="Benjamin Cruz"
-      />
-      <StoryBox
-        backgroundImage="storythree-bg"
-        title="18 Days Voyage"
-        author="Alexei Borodin"
-      />
-      <StoryBox
-        backgroundImage="storyfour-bg"
-        title="Architecturals"
-        author="Samantha Brooke"
-      />
-      <article className={classNames("flex", "flex-col", "mb-20")}>
+      <div className={classNames("flex", "flex-col", "md:flex-row", "w-full")}>
+        <StoryBox
+          backgroundImage="storyone-bg"
+          title="The Mountains"
+          author="John Appleseed"
+        />
+        <StoryBox
+          backgroundImage="storytwo-bg"
+          title="Sunset Cityscapes"
+          author="Benjamin Cruz"
+        />
+        <StoryBox
+          backgroundImage="storythree-bg"
+          title="18 Days Voyage"
+          author="Alexei Borodin"
+        />
+        <StoryBox
+          backgroundImage="storyfour-bg"
+          title="Architecturals"
+          author="Samantha Brooke"
+        />
+      </div>
+      <article
+        className={classNames("flex", "flex-col", "mb-20", "md:flex-row")}
+      >
         <Feature
           icon={featureOne}
           feature="100% Responsive"
@@ -71,7 +72,6 @@ const Home: React.FC = () => {
           details="Embeded Tweets, Facebook posts, Instagram media, Vimeo or Youtube videos, Google Maps, and more."
         />
       </article>
-      <Footer />
     </main>
   );
 };

@@ -8,7 +8,9 @@ type TextBoxProps = {
   info: string;
   buttonText: string;
   backgroundColor?: string;
-  imageSrc: string | StaticImport;
+  imageSrc?: string | StaticImport;
+  hideImage?: boolean;
+  storiesPage?: boolean;
 };
 
 export const TextBox: React.FC<TextBoxProps> = ({
@@ -17,10 +19,16 @@ export const TextBox: React.FC<TextBoxProps> = ({
   buttonText,
   backgroundColor,
   imageSrc,
+  hideImage,
+  storiesPage,
 }: TextBoxProps) => {
   return (
-    <>
-      <Image alt="TextBox header" src={imageSrc} />
+    <div className={classNames("flex", "md:flex-row", "flex-col")}>
+      <Image
+        className={classNames("w-full", hideImage && "hidden")}
+        alt="TextBox header"
+        src={imageSrc as StaticImport}
+      />
       <article
         className={classNames(
           "flex",
@@ -33,9 +41,18 @@ export const TextBox: React.FC<TextBoxProps> = ({
           "py-14",
         )}
       >
-        <h1 className={classNames("text-4xl", "leading-normal")}>
+        {storiesPage && (
+          <p className={classNames("font-bold")}>LAST MONTH"S FEATURED STORY</p>
+        )}
+        <h1 className={classNames("text-4xl", "leading-normal", "font-bold")}>
           {title.toUpperCase()}
         </h1>
+        {storiesPage && (
+          <div className={classNames("flex", "flex-row", "space-x-2")}>
+            <p className={classNames("opacity-70")}>March 2nd 2020 </p>
+            <p>by John Appleseed</p>
+          </div>
+        )}
         <p className={classNames("opacity-70", "leading-relaxed")}>{info}</p>
         <div className={classNames("flex", "flex-row", "space-x-4")}>
           <button>{buttonText}</button>
@@ -55,6 +72,6 @@ export const TextBox: React.FC<TextBoxProps> = ({
           </svg>
         </div>
       </article>
-    </>
+    </div>
   );
 };

@@ -28,9 +28,7 @@ export const Feature: React.FC<FeatureProps> = ({
     >
       <Image className={classNames("mx-auto")} src={icon} alt={feature} />
       <h1 className={classNames("font-bold", "text-xl")}>{feature}</h1>
-      <p className={classNames("leading-relaxed", "text-gray-500")}>
-        {details}
-      </p>
+      <p className={classNames("leading-relaxed", "opacity-70")}>{details}</p>
     </div>
   );
 };

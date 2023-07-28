@@ -6,12 +6,14 @@ type StoryBoxProps = {
   backgroundImage: string;
   title: string;
   author: string;
+  date?: string;
 };
 
 export const StoryBox: React.FC<StoryBoxProps> = ({
   backgroundImage,
   title,
   author,
+  date,
 }: StoryBoxProps) => {
   return (
     <article
@@ -21,11 +23,13 @@ export const StoryBox: React.FC<StoryBoxProps> = ({
         "flex",
         "flex-col",
         "text-white",
+        "w-full",
       )}
     >
       <div className={classNames("mt-auto", "p-8")}>
+        <p className={classNames("mb-2")}>{date}</p>
         <h1 className={classNames("font-bold", "mb-2", "text-xl")}>{title}</h1>
-        <p className={classNames("mb-5", "text-gray-300")}>by {author}</p>
+        <p className={classNames("mb-5", "opacity-70")}>by {author}</p>
         <hr />
         <div
           className={classNames("flex", "flex-row", "justify-between", "mt-2")}
