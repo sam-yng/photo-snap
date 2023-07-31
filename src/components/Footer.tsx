@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import classNames from "classnames";
 import Image from "next/image";
@@ -8,8 +10,11 @@ import twitter from "../../public/assets/logos/icons8-twitter.svg";
 import pinterest from "../../public/assets/logos/icons8-pinterest.svg";
 import instagram from "../../public/assets/logos/icons8-instagram-26.png";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export const Footer: React.FC = () => {
+  const pathname = usePathname();
+
   return (
     <footer
       className={classNames(
@@ -103,10 +108,30 @@ export const Footer: React.FC = () => {
               "md:mb-0",
             )}
           >
-            <Link href="/">HOME</Link>
-            <Link href="/stories">STORIES</Link>
-            <Link href="/features">FEATURES</Link>
-            <Link href="/pricing">PRICING</Link>
+            <Link
+              className={classNames(pathname === "/" && "opacity-40")}
+              href="/"
+            >
+              HOME
+            </Link>
+            <Link
+              className={classNames(pathname === "/stories" && "opacity-40")}
+              href="/stories"
+            >
+              STORIES
+            </Link>
+            <Link
+              className={classNames(pathname === "/features" && "opacity-40")}
+              href="/features"
+            >
+              FEATURES
+            </Link>
+            <Link
+              className={classNames(pathname === "/pricing" && "opacity-40")}
+              href="/pricing"
+            >
+              PRICING
+            </Link>
           </div>
         </div>
         <div

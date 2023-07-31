@@ -1,10 +1,15 @@
+"use client";
+
 import React from "react";
 import classNames from "classnames";
 import logo from "../../public/assets/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export const Navigation: React.FC = () => {
+  const pathname = usePathname();
+
   return (
     <nav
       className={classNames(
@@ -27,9 +32,24 @@ export const Navigation: React.FC = () => {
           "text-sm",
         )}
       >
-        <Link href="/stories">STORIES</Link>
-        <Link href="/features">FEATURES</Link>
-        <Link href="/pricing">PRICING</Link>
+        <Link
+          className={classNames(pathname === "/stories" && "opacity-40")}
+          href="/stories"
+        >
+          STORIES
+        </Link>
+        <Link
+          className={classNames(pathname === "/features" && "opacity-40")}
+          href="/features"
+        >
+          FEATURES
+        </Link>
+        <Link
+          className={classNames(pathname === "/pricing" && "opacity-40")}
+          href="/pricing"
+        >
+          PRICING
+        </Link>
       </div>
       <div className={classNames("md:block", "hidden", "w-64")}>
         <button

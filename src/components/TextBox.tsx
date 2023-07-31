@@ -11,6 +11,7 @@ type TextBoxProps = {
   imageSrc?: string | StaticImport;
   hideImage?: boolean;
   storiesPage?: boolean;
+  flipped?: boolean;
 };
 
 export const TextBox: React.FC<TextBoxProps> = ({
@@ -21,11 +22,16 @@ export const TextBox: React.FC<TextBoxProps> = ({
   imageSrc,
   hideImage,
   storiesPage,
+  flipped,
 }: TextBoxProps) => {
   return (
     <div className={classNames("flex", "md:flex-row", "flex-col")}>
       <Image
-        className={classNames("w-full", hideImage && "hidden")}
+        className={classNames(
+          "w-full",
+          hideImage && "hidden",
+          flipped && "md:hidden",
+        )}
         alt="TextBox header"
         src={imageSrc as StaticImport}
       />
@@ -39,6 +45,8 @@ export const TextBox: React.FC<TextBoxProps> = ({
           "p-8",
           "space-y-6",
           "py-14",
+          "md:w-[55vw]",
+          "justify-center",
         )}
       >
         {storiesPage && (
@@ -72,6 +80,17 @@ export const TextBox: React.FC<TextBoxProps> = ({
           </svg>
         </div>
       </article>
+      <Image
+        className={classNames(
+          "w-full",
+          hideImage && "hidden",
+          !flipped && "md:hidden",
+          "hidden",
+          "md:block",
+        )}
+        alt="TextBox header"
+        src={imageSrc as StaticImport}
+      />
     </div>
   );
 };

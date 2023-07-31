@@ -18,6 +18,7 @@ const Home: React.FC = () => {
         info="Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others."
         buttonText="GET AN INVITE"
         backgroundColor="bg-black"
+        flipped
       />
       <TextBox
         imageSrc={heroTwo}
@@ -30,6 +31,7 @@ const Home: React.FC = () => {
         title="Designed for everyone"
         info="Photosnap can help you create stories that resonate with your audience. Our tool is designed for photographers of all levels, brands, businesses you name it."
         buttonText="VIEW THE STORIES"
+        flipped
       />
       <div className={classNames("flex", "flex-col", "md:flex-row", "w-full")}>
         <StoryBox
