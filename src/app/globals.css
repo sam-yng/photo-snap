@@ -29,3 +29,101 @@
 	background-size: cover;
 	background-repeat: no-repeat
 }
+
+.storyfive-bg {
+	background-image: linear-gradient(#0000, #000),url("../../public/assets/stories/desktop/world-tour.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+
+.storysix-bg {
+	background-image: linear-gradient(#0000, #000),url("../../public/assets/stories/desktop/unforeseen-corners.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+
+.storyseven-bg {
+	background-image: linear-gradient(#0000, #000),url("../../public/assets/stories/desktop/king-on-africa.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+
+.storyeight-bg {
+	background-image: linear-gradient(#0000, #000),url("../../public/assets/stories/desktop/trip-to-nowhere.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+
+.storynine-bg {
+	background-image: linear-gradient(#0000, #000),url("../../public/assets/stories/desktop/rage-of-the-sea.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+
+.storyten-bg {
+	background-image: linear-gradient(#0000, #000),url("../../public/assets/stories/desktop/running-free.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+
+.storyeleven-bg {
+	background-image: linear-gradient(#0000, #000),url("../../public/assets/stories/desktop/behind-the-waves.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+
+.storytwelve-bg {
+	background-image: linear-gradient(#0000, #000),url("../../public/assets/stories/desktop/calm-waters.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+
+.storythirteen-bg {
+	background-image: linear-gradient(#0000, #000),url("../../public/assets/stories/desktop/milky-way.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+
+.storyfourteen-bg {
+	background-image: linear-gradient(#0000, #000),url("../../public/assets/stories/desktop/dark-forest.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+
+.storyfifteen-bg {
+	background-image: linear-gradient(#0000, #000),url("../../public/assets/stories/desktop/somwarpet.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+
+.storysixteen-bg {
+	background-image: linear-gradient(#0000, #000),url("../../public/assets/stories/desktop/land-of-dreams.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+
+.mountains-bg {
+	background-image: linear-gradient(#0000, #000),url("../../public/assets/stories/desktop/moon-of-appalacia.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+
+.beta-bg {
+	background-image: url("../../public/assets/shared/desktop/bg-beta.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat
+}

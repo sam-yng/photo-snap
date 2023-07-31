@@ -20,81 +20,128 @@ export const Footer: React.FC = () => {
         "px-24",
       )}
     >
-      <div className={classNames("mx-auto", "text-center", "my-20")}>
-        <Image className={classNames("w-64", "mb-8")} src={logo} alt="logo" />
-        <div
-          className={classNames(
-            "flex",
-            "flex-row",
-            "w-full",
-            "justify-between",
-            "mb-16",
-          )}
-        >
-          <Link target="blank" href="https://www.facebook.com/">
-            <Image
-              className={classNames("w-auto", "h-6")}
-              alt="facebook"
-              src={facebook}
-            />
-          </Link>
-          <Link target="blank" href="https://www.youtube.com/">
-            <Image
-              className={classNames("w-auto", "h-6")}
-              alt="youtube"
-              src={youtube}
-            />
-          </Link>
-          <Link target="blank" href="https://twitter.com/home">
-            <Image
-              className={classNames("w-auto", "h-6")}
-              alt="twitter"
-              src={twitter}
-            />
-          </Link>
-          <Link target="blank" href="https://www.pinterest.com.au/">
-            <Image
-              className={classNames("w-auto", "h-6")}
-              alt="pinterest"
-              src={pinterest}
-            />
-          </Link>
-          <Link target="blank" href="https://www.instagram.com/">
-            <Image
-              className={classNames("w-auto", "h-6")}
-              alt="instagram"
-              src={instagram}
-            />
-          </Link>
-        </div>
-        <div className={classNames("flex", "flex-col", "space-y-8", "mb-20")}>
-          <Link href="/">HOME</Link>
-          <Link href="/stories">STORIES</Link>
-          <Link href="/features">FEATURES</Link>
-          <Link href="/pricing">PRICING</Link>
-        </div>
-        <div
-          className={classNames("flex", "flex-row", "justify-between", "mx-3")}
-        >
-          <button className={classNames("tracking-wide")}>GET AN INVITE</button>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={0.5}
-            stroke="currentColor"
-            className="w-12 h-10"
+      <div
+        className={classNames(
+          "mx-auto",
+          "text-center",
+          "my-20",
+          "md:flex",
+          "md:flex-row",
+          "md:mx-0",
+          "md:justify-between",
+          "md:my-12",
+        )}
+      >
+        <div className={classNames("md:flex", "md:flex-row")}>
+          <div
+            className={classNames(
+              "md:mr-28",
+              "md:flex",
+              "md:flex-col",
+              "md:justify-between",
+            )}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+            <Image
+              className={classNames("w-64", "mb-8", "md:w-44", "md-mb-auto")}
+              src={logo}
+              alt="logo"
             />
-          </svg>
+            <div
+              className={classNames(
+                "flex",
+                "flex-row",
+                "w-full",
+                "justify-between",
+                "mb-16",
+                "md:mb-0",
+              )}
+            >
+              <Link target="blank" href="https://www.facebook.com/">
+                <Image
+                  className={classNames("w-auto", "h-6")}
+                  alt="facebook"
+                  src={facebook}
+                />
+              </Link>
+              <Link target="blank" href="https://www.youtube.com/">
+                <Image
+                  className={classNames("w-auto", "h-6")}
+                  alt="youtube"
+                  src={youtube}
+                />
+              </Link>
+              <Link target="blank" href="https://twitter.com/home">
+                <Image
+                  className={classNames("w-auto", "h-6")}
+                  alt="twitter"
+                  src={twitter}
+                />
+              </Link>
+              <Link target="blank" href="https://www.pinterest.com.au/">
+                <Image
+                  className={classNames("w-auto", "h-6")}
+                  alt="pinterest"
+                  src={pinterest}
+                />
+              </Link>
+              <Link target="blank" href="https://www.instagram.com/">
+                <Image
+                  className={classNames("w-auto", "h-6")}
+                  alt="instagram"
+                  src={instagram}
+                />
+              </Link>
+            </div>
+          </div>
+          <div
+            className={classNames(
+              "flex",
+              "flex-col",
+              "space-y-8",
+              "mb-20",
+              "md:text-left",
+              "md:mb-0",
+            )}
+          >
+            <Link href="/">HOME</Link>
+            <Link href="/stories">STORIES</Link>
+            <Link href="/features">FEATURES</Link>
+            <Link href="/pricing">PRICING</Link>
+          </div>
         </div>
-        <p className={classNames("opacity-70", "mt-6")}>
-          Copyright 2019. All Rights Reserved
-        </p>
+        <div
+          className={classNames("md:flex", "md:flex-col", "md:justify-between")}
+        >
+          <div
+            className={classNames(
+              "flex",
+              "flex-row",
+              "justify-between",
+              "mx-3",
+            )}
+          >
+            <button className={classNames("tracking-wide")}>
+              GET AN INVITE
+            </button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={0.5}
+              stroke="currentColor"
+              className="w-12 h-10"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+              />
+            </svg>
+          </div>
+          <p className={classNames("opacity-70", "mt-6")}>
+            Copyright 2019. All Rights Reserved
+          </p>
+        </div>
       </div>
     </footer>
   );
